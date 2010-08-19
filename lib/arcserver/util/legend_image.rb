@@ -31,7 +31,7 @@ module ArcServer
             legend_image.composite!(img[0], 20, y+=25, Magick::OverCompositeOp)
             gc.text(50, y+14, legend_class[:label]) unless legend_class[:label].nil?
             gc.draw(legend_image)
-            img.destroy!
+            img[0].destroy!
           end
 
           y += 5
